@@ -1,0 +1,30 @@
+.navbar-brand {
+  padding: 10px 0;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  z-index: 2;
+}
+
+
+.sticky .navbar-brand {
+  color: #000;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  background: #fbfbfb;
+  left: 0;
+  padding: 0 4rem;
+  transition: 0.3s all;
+}
+
+.sticky .nav-link {
+  color: #000;
+}

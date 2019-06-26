@@ -1,0 +1,13 @@
+footer {
+    background-color: #EBEDF2;
+    padding: 40px;
+}
+.footer-link a{
+    display: inline-block;
+    margin-right: 1em;
+    text-transform: uppercase;
+    color: #868D9B;
+}
+.pull-right{
+    float: right;
+}
