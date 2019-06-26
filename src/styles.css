@@ -1,1 +1,118 @@
 /* You can add global styles to this file, and also import other style files */
+/* Strat responsive */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@media (max-width:1280px) {
+  .image {
+    height: 271px !important;
+  }
+}
+
+@media (max-width:1024px) {
+  .inner-content {
+    padding: 103px 0 50px !important;
+  }
+
+  .plans-option {
+    padding: 16px !important;
+  }
+
+  .image {
+    height: 205px !important;
+  }
+}
+
+@media (max-width:768px) {
+  .image {
+    height: 337px !important;
+  }
+
+  .inner-content {
+    padding: 71px 0 0px !important;
+  }
+
+  .plans-option {
+    padding: 16px !important;
+  }
+
+  .inner-content p {
+    margin-top: 0px !important;
+  }
+
+  .inner-content h1 {
+    font-size: 35px !important;
+  }
+
+  .inner-content p {
+    font-size: 18px !important;
+    margin: 0 !important;
+  }
+
+  .plans-option {
+    padding: 0px !important;
+  }
+
+  .plans-option img {
+    margin-top: 7px !important;
+  }
+
+  .select-plan-btn {
+    max-width: 282px !important;
+    margin: 10px !important;
+  }
+
+  .plan-list {
+    padding: 10px 10px !important;
+  }
+}
+
+@media (max-width:425px) {
+  .card {
+    width: 90% !important;
+    padding: 25px 15px 40px !important;
+  }
+
+  .image {
+    height: auto !important;
+  }
+
+  .inner-content {
+    padding: 43px 0 0px !important;
+  }
+
+  .inner-content h1 {
+    font-size: 20px !important;
+    margin: 0 !important;
+  }
+
+  .inner-content p {
+    font-size: 12px !important;
+    margin: 0 !important;
+  }
+
+  .inner-content span {
+    font-size: 11px;
+  }
+
+  .inner-content button {
+    padding: 8px !important;
+    margin: 1px 0 3px !important;
+  }
+
+  .plans-option {
+    display: none !important;
+  }
+
+  .select-plan {
+    padding: 17px 0;
+    background-color: #f5f6f7;
+  }
+
+  .Select-box {
+    margin-bottom: 10px;
+  }
+}

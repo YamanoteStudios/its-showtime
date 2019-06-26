@@ -1,0 +1,191 @@
+.home-page-banner {
+  width: 100%;
+}
+
+.home-page-banner img {
+  width: 100%;
+}
+
+.inner-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding: 150px 0 50px;
+  color: #fff;
+}
+
+.inner-content h1 {
+  color: #fff;
+  font-size: 56px;
+  font-weight: 100;
+}
+
+.inner-content p {
+  margin-top: 32px;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.inner-content span {
+  font-size: 16px;
+  font-weight: 100;
+  display: block;
+}
+
+.inner-content button {
+  padding: 20px;
+  margin: 20px 0 10px;
+  background: #ffff;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.inner-content label {
+  font-size: 10px;
+  font-weight: normal;
+  display: block;
+}
+
+.plans-option {
+  padding: 100px;
+}
+
+.plans-option img {
+  width: auto;
+  border: 1px solid;
+  border-radius: 100px;
+  padding: 18px 20px;
+  margin-top: 24px;
+}
+
+/* Start Select Plan */
+.select-plan {
+  padding: 40px 0;
+  background-color: #f5f6f7;
+}
+
+.select-plan h1 {
+  font-size: 48px;
+  font-weight: 300;
+  font-stretch: normal;
+  line-height: 52px;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+
+.select-plan p {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-stretch: normal;
+  line-height: 24px;
+  color: #5E6573;
+  text-align: center;
+}
+
+.select-plan .container {
+  margin: 40px auto 0;
+}
+
+.plan-box {
+  padding: 40px 0 23px;
+  background: #fff;
+  box-shadow: 0 2px 10px 0 rgba(134, 141, 155, 0.2);
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.plan-box h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bolder;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  color: #5E6573;
+}
+
+.plan-box h5 {
+  margin: 0 auto 8px;
+  color: #5E6573;
+  font-size: 24px;
+  font-weight: 300;
+  font-stretch: normal;
+  line-height: 32px;
+}
+
+.plan-box h6 {
+  font-size: 48px;
+  font-weight: 300;
+  font-stretch: normal;
+  margin: 0 auto;
+  color: #5E6573;
+}
+
+.plan-box h6 sub {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.select-plan-btn {
+  width: 100%;
+  max-width: 344px;
+  border: 1.5px solid #AEB4BF;
+  color: #1E1E1E;
+  background: transparent;
+  height: 56px;
+  margin: 30px;
+}
+
+.plan-list {
+  background-color: #FCFCFC;
+  padding: 32px 50px;
+}
+
+.plan-list ul {
+  list-style: none;
+
+}
+
+.plan-list ul li {
+  padding: 12px 0;
+  color: #4C5260;
+  position: relative;
+}
+
+.plan-list ul li img {
+  position: absolute;
+  left: -38px;
+  top: 17px;
+}
+
+.btn-collaps {
+  width: 100%;
+  background: none;
+  border: none;
+}
+
+.btn-collaps:focus {
+  outline: none;
+}
+
+.Select-box {
+  cursor: pointer;
+  transition: ease-in-out 1s;
+}
+
+.Select-box:hover .select-plan-btn {
+  background: #1E1E1E;
+  color: #fff;
+}
+
+.movie-banner {
+  width: 100%;
+}
+
+.movie-banner img {
+  width: 100%;
+}
