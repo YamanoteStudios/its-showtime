@@ -1,0 +1,8 @@
+<div class="row">
+  <!-- <div class="col-md-12"> -->
+    <div class="col-md-3" *ngFor="let movie of moviesListService.getAllMovies()">
+      <img src="../../../assets/movies/{{movie.name}}.jpg" alt="Movie">
+      <label>{{movie.name}}</label>
+    </div>
+  <!-- </div> -->
+</div>
