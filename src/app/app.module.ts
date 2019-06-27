@@ -3,17 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/common/header/header.component';
-import { HomeComponent } from './components/common/home/home.component';
 import { FooterComponent } from './components/common/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LandingComponent } from './components/common/landing/landing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
 
     HeaderComponent,
-    HomeComponent,
-    FooterComponent
+    FooterComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
