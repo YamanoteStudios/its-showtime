@@ -5,8 +5,10 @@
 .navbar {
   position: fixed;
   width: 100%;
-  background: #000;;
+  background: #000;
+  ;
   z-index: 2;
+  padding: 0 4rem;
 }
 
 
@@ -22,9 +24,29 @@
   background: #fbfbfb;
   left: 0;
   padding: 0 4rem;
-  transition: 0.3s all;
 }
 
 .sticky .nav-link {
   color: #000;
+}
+
+
+
+.navbar-expand-lg .navbar-nav .dropdown-menu a {
+  color: #333 !important;
+  padding: 3px 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu a:hover {
+  color: #dc3545 !important;
+}
+
+.dropdown-divider {
+  margin: 0;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  padding: 0;
 }

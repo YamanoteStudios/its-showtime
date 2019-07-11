@@ -1,0 +1,4 @@
+.profile-menu .active {
+  border-bottom: 2px solid;
+  margin-bottom: -2px;
+}

@@ -5,6 +5,10 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  cursor: pointer;
+}
+
 
 @media (max-width:1280px) {
   .image {

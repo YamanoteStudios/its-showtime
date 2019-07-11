@@ -1,10 +1,29 @@
 <div class="signin-page">
   <div class="card">
-    <h1>Sign In</h1>
+    <h1>Signin</h1>
     <div class="input">
-      <input type="text" placeholder="Email or Phone number">
-      <input type="password" placeholder="Password">
-      <button>Sign in</button>
+      <form class="form-sample" [formGroup]="signinForm">
+        <div class="form-group">
+          <input type="email" formControlName="email" class="form-control" placeholder="Registered email" />
+          <div class="text-danger" *ngIf="signinform.email.touched && signinform.email.errors">
+            <span *ngIf="signinform.email.errors.required">
+              <strong>Email cannot be empty.</strong>
+            </span>
+          </div>
+        </div>
+        <div class="form-group">          
+          <input formControlName="password" type="password" class="form-control"
+            placeholder="Password" />
+          <div class="text-danger" *ngIf="signinform.password.touched && signinform.password.errors">
+            <span *ngIf="signinform.password.errors.required">
+              <strong>Password cannot be empty</strong>
+            </span>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-signin" (click)="signin()"><i class="fa fa-sign-in" aria-hidden="true"></i>Signin</button>
+        </div>
+      </form>
     </div>
     <div class="remmeber">
       <div class="checkbox">
@@ -15,9 +34,9 @@
     </div>
     <div class="fb-login">
       <img class="icon-facebook" src="../../../../assets/img/FB-f-Logo__blue_57.png">
-      <span class="fbBtnText">Login with Facebook</span>
+      <span class="fbBtnText">Signin with Facebook</span>
     </div>
-    <div class="login-signup-now">New to Its Movie time? <a href="#" class="">Sign up now</a>.
+    <div class="login-signup-now">New to Its Movie time? <a href="#" class="">Signup now</a>.
     </div>
   </div>
 </div>

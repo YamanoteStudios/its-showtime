@@ -10,4 +10,11 @@ export class MoviesListService {
   getAllMovies() {
     return movies;
   }
+
+  searchMovie(id): { id: string, name: string } {
+    return movies.filter((item) => {
+      return item.id === id;
+    })[0];
+  }
+
 }
