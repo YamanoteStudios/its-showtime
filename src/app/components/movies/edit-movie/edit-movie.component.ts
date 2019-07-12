@@ -14,7 +14,7 @@ export class EditMovieComponent implements OnInit {
   movieForm: FormGroup;
   movieID: number;
   changesSaved: boolean = false;
-  movieMeta: { id: string, name: string };
+  movieMeta: { id: number, name: string };
 
   constructor(
     private fb: FormBuilder,
@@ -25,7 +25,7 @@ export class EditMovieComponent implements OnInit {
   ngOnInit() {
     this.initForm();
     this.bindMovie();
-    this.searchMovie();
+    this.getSingleMovie();
   }
 
   initForm() {
@@ -37,12 +37,12 @@ export class EditMovieComponent implements OnInit {
 
   bindMovie() {
     this.router.params.subscribe((prams: Params) => {
-      this.movieID = prams.id;
+      this.movieID = +prams.id;
     })
   }
 
-  searchMovie() {
-    this.movieMeta = this.moviesListService.searchMovie(this.movieID);
+  getSingleMovie() {
+    this.movieMeta = this.moviesListService.getSingleMovie(this.movieID);
     this.movieForm.setValue(this.movieMeta);
   }
 

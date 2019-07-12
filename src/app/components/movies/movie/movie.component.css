@@ -1,0 +1,7 @@
+.image {
+  height: 100% !important; 
+}
+
+.img-grid {
+  display: grid;
+}

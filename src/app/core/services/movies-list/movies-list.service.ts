@@ -11,10 +11,12 @@ export class MoviesListService {
     return movies;
   }
 
-  searchMovie(id): { id: string, name: string } {
-    return movies.filter((item) => {
-      return item.id === id;
-    })[0];
+  getSingleMovie(id) {
+    const movie = movies.find((movie) => {
+      return movie.id === id;
+    });
+    console.log(movie);
+    return movie;
   }
 
 }

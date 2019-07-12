@@ -11,12 +11,14 @@ import { MoviesListComponent } from './components/movies/movies-list/movies-list
 
 import { CanActiveGuard } from './auth/can-activate.guard';
 import { CanActiveChildGuard } from './auth/can-activate-child.guard';
+import { CanDeactiveGuard } from './auth/can-deactive.guard';
+import { ResolveGuard } from './auth/resolve.guard';
 
 import { MoviesListService } from './core/services/movies-list/movies-list.service';
 import { EditMovieComponent } from './components/movies/edit-movie/edit-movie.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CanDeactiveGuard } from './auth/can-deactive.guard';
+import { MovieComponent } from './components/movies/movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +28,11 @@ import { CanDeactiveGuard } from './auth/can-deactive.guard';
     FooterComponent,
     LandingComponent,
 
-    MoviesListComponent,
     UserProfilePageComponent,
-    EditMovieComponent,
     MoviesComponent,
+    MoviesListComponent,
+    MovieComponent,
+    EditMovieComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { CanDeactiveGuard } from './auth/can-deactive.guard';
 
     CanActiveGuard,
     CanActiveChildGuard,
-    CanDeactiveGuard
+    CanDeactiveGuard,
+    ResolveGuard
   ],
   bootstrap: [AppComponent]
 })
