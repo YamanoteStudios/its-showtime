@@ -41,10 +41,13 @@ export class HeaderComponent implements OnInit {
     let role = localStorage.getItem('userRole');
     // console.log(role)
     if (role == 'admin') {
-      return 'admin';
+      return 'Admin';
     }
     else if (role == 'user') {
-      return 'user';
+      return 'User';
+    }
+    else if (role == 'superadmin') {
+      return 'Super Admin';
     }
   }
 

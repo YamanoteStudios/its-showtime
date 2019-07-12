@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
@@ -8,17 +9,17 @@ import { FooterComponent } from './components/common/footer/footer.component';
 import { LandingComponent } from './components/common/landing/landing.component';
 import { UserProfilePageComponent } from './components/user-profile-page/user-profile-page.component';
 import { MoviesListComponent } from './components/movies/movies-list/movies-list.component';
+import { MovieComponent } from './components/movies/movie/movie.component';
+import { EditMovieComponent } from './components/movies/edit-movie/edit-movie.component';
+import { MoviesComponent } from './components/movies/movies.component';
 
 import { CanActiveGuard } from './auth/can-activate.guard';
 import { CanActiveChildGuard } from './auth/can-activate-child.guard';
 import { CanDeactiveGuard } from './auth/can-deactive.guard';
 import { ResolveGuard } from './auth/resolve.guard';
+import { CanLoadGuard } from './auth/can-load.guard';
 
 import { MoviesListService } from './core/services/movies-list/movies-list.service';
-import { EditMovieComponent } from './components/movies/edit-movie/edit-movie.component';
-import { MoviesComponent } from './components/movies/movies.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MovieComponent } from './components/movies/movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { MovieComponent } from './components/movies/movie/movie.component';
     CanActiveGuard,
     CanActiveChildGuard,
     CanDeactiveGuard,
-    ResolveGuard
+    ResolveGuard,
+    CanLoadGuard
   ],
   bootstrap: [AppComponent]
 })

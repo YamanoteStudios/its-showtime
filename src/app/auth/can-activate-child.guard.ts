@@ -18,12 +18,12 @@ export class CanActiveChildGuard implements CanActivateChild {
       .then(
         (authenticated) => {
           // console.log(authenticated);
-          if (authenticated == 'admin') {
+          if (authenticated == 'admin' || 'superadmin') {
             return true;
           }
           else {
             swal.fire(
-              'Only admin can visit this page!',
+              'Only admins can visit this page!',
               '',
               'error'
             );

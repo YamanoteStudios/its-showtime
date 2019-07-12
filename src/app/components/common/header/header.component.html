@@ -21,18 +21,15 @@
         </li>
 
         <li class="nav-item dropdown" *ngIf="loginCheck()">
-          
-          <a *ngIf="roleCheck() == 'admin'" class="nav-link dropdown-toggle" id="adminNavbar" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Admin
-          </a>
-          <a *ngIf="roleCheck() == 'user'" class="nav-link dropdown-toggle" id="userNavbar" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            User
+
+          <a class="nav-link dropdown-toggle" id="adminNavbar" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            {{roleCheck()}}
           </a>
 
           <div class="dropdown-menu" aria-labelledby="adminNavbar">
             <a class="dropdown-item" routerLink="/profile">Profile</a>
+            <a class="dropdown-item" routerLink="/add-movie">Add Movie</a>
             <a class="dropdown-item" (click)="authService.signout()">Signout</a>
           </div>
         </li>

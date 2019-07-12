@@ -11,6 +11,7 @@ import { CanActiveChildGuard } from './auth/can-activate-child.guard';
 import { CanActiveGuard } from './auth/can-activate.guard';
 import { CanDeactiveGuard } from './auth/can-deactive.guard';
 import { ResolveGuard } from './auth/resolve.guard';
+import { CanLoadGuard } from './auth/can-load.guard';
 
 const routes: Routes = [
 
@@ -43,14 +44,16 @@ const routes: Routes = [
                 canActivateChild: [CanActiveChildGuard],
                 canActivate: [CanActiveGuard]
             },
+            {
+                path: 'add-movie',
+                loadChildren: './components/movies/add-movie/add-movie.module#AddMovieModule',
+                canLoad: [CanLoadGuard]
+            }
         ]
     },
     {
         path: 'profile',
         component: UserProfilePageComponent,
-        data: {
-            title: 'User Profile Page'
-        },
         canActivate: [CanActiveGuard]
     }
 ]
