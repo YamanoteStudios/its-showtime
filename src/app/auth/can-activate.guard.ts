@@ -14,8 +14,8 @@ export class CanActiveGuard implements CanActivate, CanActivateChild {
     return this.authServ.isAuthenticated()
       .then(
         (authenticated) => {
-          if (authenticated['loginStatus']) {
-            console.log(authenticated);
+          if (authenticated) {
+            // console.log(authenticated);
             return true;
           }
           else {
@@ -24,7 +24,7 @@ export class CanActiveGuard implements CanActivate, CanActivateChild {
               '',
               'error'
             )
-            this.router.navigate(['/landing']);
+            this.router.navigate(['/signin']);
           }
         });
   }

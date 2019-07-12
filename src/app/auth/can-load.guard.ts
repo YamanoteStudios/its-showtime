@@ -12,7 +12,7 @@ export class CanLoadGuard implements CanLoad {
     if (this.authService.isAuthenticated()) {
       return true;
     }
-    this.authService.setRedirectUrl(url);
+    // this.authService.setRedirectUrl(url);
     this.router.navigate(['/signin']);
     return false;
   }

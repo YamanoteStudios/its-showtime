@@ -14,11 +14,11 @@ export class CanActiveChildGuard implements CanActivateChild {
 
   canActivateChild(route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    return this.authServ.isAuthenticated()
+    return this.authServ.userRoleAuthenticated()
       .then(
         (authenticated) => {
-          console.log(authenticated['role']);
-          if (authenticated['role'] == 'admin') {
+          // console.log(authenticated);
+          if (authenticated == 'admin') {
             return true;
           }
           else {

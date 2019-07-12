@@ -30,21 +30,20 @@ export class HeaderComponent implements OnInit {
   }
 
   loginCheck() {
-    let userMeta = JSON.parse(localStorage.getItem('userMeta'));
-    // console.log(userMeta['loginStatus']);
-    if (userMeta['loginStatus'])
+    let loginStatus = localStorage.getItem('loginStatus');
+    if (loginStatus)
       return true;
 
     return false;
   }
 
   roleCheck() {
-    let role = JSON.parse(localStorage.getItem('userMeta'));
+    let role = localStorage.getItem('userRole');
     // console.log(role)
-    if (role['role'] == 'admin') {
+    if (role == 'admin') {
       return 'admin';
     }
-    else if (role['role'] == 'user') {
+    else if (role == 'user') {
       return 'user';
     }
   }

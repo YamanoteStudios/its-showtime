@@ -48,7 +48,7 @@ export class EditMovieComponent implements OnInit {
 
   updateMovie() {
     this.changesSaved = true;
-    console.log(this.movieForm.value);
+    // console.log(this.movieForm.value);
   }
 
   canDeactivate(): Observable<boolean> | Promise<boolean> | boolean {

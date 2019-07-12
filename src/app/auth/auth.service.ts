@@ -13,15 +13,25 @@ export class AuthService {
     private router: Router
   ) { }
 
-  loginMeta = { loginStatus: false, role: '' }
-
-  private redirectUrl: string = '/';
+  loginStatus = false;
+  userRole = '';
 
   isAuthenticated() {
     const promise = new Promise(
       (resolve, reject) => {
         setTimeout(() => {
-          resolve(JSON.parse(localStorage.getItem('userMeta')));
+          resolve(localStorage.getItem('loginStatus'));
+        }, 100);
+      }
+    );
+    return promise;
+  }
+
+  userRoleAuthenticated() {
+    const promise = new Promise(
+      (resolve, reject) => {
+        setTimeout(() => {
+          resolve(localStorage.getItem('userRole'));
         }, 100);
       }
     );
@@ -46,9 +56,10 @@ export class AuthService {
             'You are loggedin!',
             'success'
           );
-          this.loginMeta.loginStatus = true;
-          this.loginMeta.role = user.role;
-          localStorage.setItem('userMeta', JSON.stringify(this.loginMeta));
+          this.loginStatus = true;
+          this.userRole = user.role;
+          localStorage.setItem('loginStatus', JSON.stringify(this.loginStatus));
+          localStorage.setItem('userRole', this.userRole);
 
           return this.router.navigate(['/profile']);
         }
@@ -59,9 +70,7 @@ export class AuthService {
         'error'
       );
 
-      this.loginMeta.loginStatus = false;
-      this.loginMeta.role = '';
-      localStorage.setItem('userMeta', JSON.stringify(this.loginMeta));
+      localStorage.clear();
       return this.router.navigate(['/landing']);
     }
   }
@@ -73,17 +82,8 @@ export class AuthService {
       'success'
     );
 
-    this.loginMeta.loginStatus = false;
-    this.loginMeta.role = '';
-    localStorage.setItem('userMeta', JSON.stringify(this.loginMeta));
+    localStorage.clear();
     this.router.navigate(['/landing']);
-  }
-
-  getRedirectUrl(): string {
-    return this.redirectUrl;
-  }
-  setRedirectUrl(url: string): void {
-    this.redirectUrl = url;
   }
 
 }
